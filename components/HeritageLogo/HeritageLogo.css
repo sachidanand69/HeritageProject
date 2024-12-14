@@ -1,0 +1,130 @@
+.BigDiv {
+    margin: 0; /* Remove any external margin */
+    height: 40px;
+    width: 100px;
+    padding: 0; /* Ensure no internal padding */
+    /* background-color: grey; */
+    display: flex; /* Use flexbox for easier alignment */
+    flex-direction: column; /* Align children in a column */
+}
+
+.BigDiv .MidDiv {
+    height: 20px;
+    width: 100px;
+    display: flex; /* Flexbox for the child divs */
+    padding: 0; /* No internal padding */
+    margin: 0; /* Ensure no external margin */
+    background-color: transparent; /* Uncomment or set if needed */
+}
+
+.BigDiv .MidDiv div {
+    height: 16px;
+    width: 16px;
+    padding: 0; /* No internal padding */
+    margin: 0; /* Ensure no external margin */
+    background-color: #34b1eb;
+}
+.BigDiv .MidDiv .get {
+    background-color: transparent;
+}
+.BigDiv .MidDiv .middle{
+    -webkit-animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          transition-duration: 1s;
+}
+.BigDiv .MidDiv .left {
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    transition-duration: 1s;
+}
+.BigDiv .MidDiv .right{
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    transition-duration: 1s;   
+}
+.text-container {
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    display: inline-block;
+    font-size: 10px;
+    color: #34b1eb;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline overline;
+}
+/* slide-right */
+@-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  /* slide-left */
+  @-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }  
+  /* flip-middle */
+  @-webkit-keyframes scale-in-ver-center {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-ver-center {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      opacity: 1;
+    }
+  }
