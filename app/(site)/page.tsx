@@ -12,6 +12,9 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
+import StoreContextProvider from "@/Context/context";
+import AgentRegistration from "@/components/AgentRegistration";
+import { BrowserRouter } from "react-router-dom";
 
 export const metadata: Metadata = {
   title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
