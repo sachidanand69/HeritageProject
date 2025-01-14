@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(site)/auth/signup/page.js"
     ],
-    "/(site)/auth/corporate/page": [
+    "/(site)/auth/agent/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(site)/auth/corporate/page.js"
+      "static/chunks/app/(site)/auth/agent/page.js"
     ]
   }
 }

@@ -23,6 +23,20 @@ const StoreContextProvider=({children}:{
         { value: 12, label: "United India Insurance"}
         ])
 
+        const [corporateBankOptions,setCorporateBankOptions]=useState<{ value: number; label: string }[]>( [{ value: 1, label: "ICICI Lamboard GIC LTD" },
+            { value: 2, label: "IFFCO-TOKIO"}, 
+            { value: 3, label: "Indian Bank Association [In National Insurance Company]"}, 
+            { value: 4, label: "Indian Bank Association [In United India Insurance]"}, 
+            { value: 5, label: "National Insurance Company"}, 
+            { value: 6, label: "New India Insurance"}, 
+            { value: 7, label: "Royal Sundaram"}, 
+            { value: 8, label: "SBI General Insurance"}, 
+            { value: 9, label: "Star Health Insurance"}, 
+            { value: 10, label: "TATA AIG General Insurance"}, 
+            { value: 11, label: "The Oriental Insurance Company Ltd"}, 
+            { value: 12, label: "United India Insurance"}
+            ])
+
     const contextValue = {options} ;
 
     return (

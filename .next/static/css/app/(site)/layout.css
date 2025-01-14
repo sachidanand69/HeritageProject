@@ -973,6 +973,9 @@ video {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mt-30 {
+  margin-top: 7.5rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -993,12 +996,6 @@ video {
 }
 .mt-\[6px\] {
   margin-top: 6px;
-}
-.mt-20 {
-  margin-top: 5rem;
-}
-.mt-30 {
-  margin-top: 7.5rem;
 }
 .line-clamp-2 {
   overflow: hidden;

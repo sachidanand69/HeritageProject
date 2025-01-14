@@ -158,6 +158,7 @@ const AgentRegistration = () => {
 
           <button 
                   // aria-label="signup with email and password"
+                  type='button'
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho left-4"
                   onClick={()=>{
                     setData({firstName:"",lastName:"",agent_Code:"",email:"",mobile_no:"", user_name:"",password:"", confirm_password:""})

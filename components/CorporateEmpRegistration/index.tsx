@@ -11,10 +11,12 @@ const CorporateEmpRegistration = () => {
   const [data, setData] = useState({
       firstName: "",
       lastName: "",
-      agent_Code: "",
-      email: "",
-      mobile_no:"",
-      user_name:"",
+      policy_number: "",
+      card_number: "",
+      Emp_ID:"",
+      Email_Address:"",
+      Mobile_Number:"",
+      User_Name:"",
       password:"",
       confirm_password:""
     });
@@ -50,6 +52,18 @@ const CorporateEmpRegistration = () => {
         <br />
         <br />
         <br />
+        <label htmlFor="dropdown">Insurance Co.* :</label>
+        <select id="dropdown" value={selectedOption} onChange={handleChange} className="w-full border-b ml-10 border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2">
+          <option value="" className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho" >{selectedOption}</option>
+          {options.map((option) => (
+            <option key={option.value} value={option.value} className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho outline-none border-none">
+              {option.label}
+            </option>
+          ))}
+        </select>
+        <br />
+        <br />
+        <br />
 
         <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
           <input
@@ -65,7 +79,7 @@ const CorporateEmpRegistration = () => {
 
           <input
             name="lastName"
-            type="text"
+            type="text" 
             placeholder="Last name"
             value={data.lastName}
             onChange={(e) =>
@@ -80,7 +94,7 @@ const CorporateEmpRegistration = () => {
             name="Agent Code"
             type="text"
             placeholder="Agent Code"
-            defaultValue={data.agent_Code}
+            defaultValue={data.policy_number}
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue})
             }
@@ -91,7 +105,7 @@ const CorporateEmpRegistration = () => {
             name="Email"
             type="email"
             placeholder="Email Address"
-            defaultValue={data.email}
+            defaultValue={data.Email_Address}
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue })
             }
@@ -103,7 +117,7 @@ const CorporateEmpRegistration = () => {
             name="Mobile No"
             type="text"
             placeholder="Mobile Number"
-            defaultValue={data.mobile_no}
+            defaultValue={data.Mobile_Number}
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue })
             }
@@ -114,7 +128,7 @@ const CorporateEmpRegistration = () => {
             name="User Name"
             type="text"
             placeholder="User Name"
-            defaultValue={data.user_name}
+            defaultValue={data.User_Name}
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue })
             }
@@ -137,7 +151,7 @@ const CorporateEmpRegistration = () => {
             name="password"
             type="password"
             placeholder="Confirm Password"
-            defaultValue={data.confirm_password}
+            defaultValue={data.confirm_password} 
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue })
             }
