@@ -44,18 +44,6 @@ const AgentRegistration = () => {
   return (
     <div className='mt-40'>
       <form>
-        <label htmlFor="dropdown">Insurance Co.* :</label>
-        <select id="dropdown" value={selectedOption} onChange={handleChange} className="w-full border-b ml-10 border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2">
-          <option value="" className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho" >{selectedOption}</option>
-          {options.map((option) => (
-            <option key={option.value} value={option.value} className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho outline-none border-none">
-              {option.label}
-            </option>
-          ))}
-        </select>
-        <br />
-        <br />
-        <br />
 
         <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
           <input

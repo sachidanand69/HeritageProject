@@ -35,14 +35,32 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "Find Hospitals",
         newTab: false,
         path: "/blog",
       },
       
       {
         id: 35,
-        title: "Docs",
+        title: "NABH-Pre-Accrediation",
+        newTab: false,
+        path: "/docs",
+      },
+      {
+        id: 37,
+        title: "Rohini Registration",
+        newTab: false,
+        path: "/docs",
+      },
+      {
+        id: 38,
+        title: "Discloser",
+        newTab: false,
+        path: "/docs",
+      },
+      {
+        id: 39,
+        title: "Join Our Networks",
         newTab: false,
         path: "/docs",
       },
@@ -51,36 +69,36 @@ const menuData: Menu[] = [
   },
   {
     id: 2.3,
-    title: "Grievances",
+    title: "Senior Citizens",
     newTab: false,
     path: "/docs",
   },
   {
     id: 3,
-    title: "Senior Citizens",
+    title: "Services",
     newTab: false,
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "UB Arogyadaan",
         newTab: false,
         path: "/blog",
       },
       {
         id: 34,
-        title: "Sign In",
+        title: "OMP",
         newTab: false,
         path: "/auth/signin",
       },
       {
         id: 35,
-        title: "Sign Up",
+        title: "Cashless Anywhere",
         newTab: false,
         path: "/auth/signup",
       },
       {
         id: 35,
-        title: "Docs",
+        title: "Hospital Portal",
         newTab: false,
         path: "/docs",
       },
@@ -99,12 +117,12 @@ const menuData: Menu[] = [
     ],
   },
 
-  // {
-  //   id: 4,
-  //   title: "Support",
-  //   newTab: false,
-  //   path: "/support",
-  // },
+  {
+    id: 4,
+    title: "Careers",
+    newTab: false,
+    path: "/support",
+  },
 ];
 
 export default menuData;
