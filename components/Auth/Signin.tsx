@@ -3,12 +3,35 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
+import { useEffect } from "react";
 const Signin = () => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
+
+  const [queryParams, setQueryParams] = useState({
+    memberID: '',
+    password: '',
+    paths: '',
+  });
+
+  console.log(window.location.href)
+  useEffect(() => {
+    // Get the full URL from window.location.href
+    const url = new URL(window.location.href);
+    
+    // Use URLSearchParams to extract query parameters
+    const params = new URLSearchParams(url.search);
+    
+    // Extract query parameters (or set default values if they don't exist)
+    setQueryParams({
+      memberID: params.get('memberID') || '',
+      password: params.get('password') || '',
+      paths: params.get('paths') || '',
+    });
+  }, []);
+
 
   return (
     <>
@@ -125,7 +148,7 @@ const Signin = () => {
               <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
                 <input
                   type="text"
-                  placeholder="Email"
+                  placeholder={queryParams.memberID}
                   name="email"
                   value={data.email}
                   onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -134,7 +157,7 @@ const Signin = () => {
 
                 <input
                   type="password"
-                  placeholder="Password"
+                  placeholder={queryParams.password}
                   name="password"
                   value={data.password}
                   onChange={(e) =>
@@ -208,7 +231,7 @@ const Signin = () => {
                   Don't have an account?{" "}
                   <Link
                     className="text-black hover:text-primary dark:text-white hover:dark:text-primary"
-                    href="/auth/signup"
+                    href={queryParams.paths}
                   >
                     Sign Up
                   </Link>
@@ -224,3 +247,5 @@ const Signin = () => {
 };
 
 export default Signin;
+
+

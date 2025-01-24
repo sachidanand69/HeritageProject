@@ -12,10 +12,10 @@ const CorporateEmpRegistration = () => {
       firstName: "",
       lastName: "",
       policy_number: "",
-      card_number: "",
-      Emp_ID:"",
-      Email_Address:"",
-      Mobile_Number:"",
+      card_number:"",
+      email_address:"",
+      employee_id:"",
+      mobile_number:"",
       User_Name:"",
       password:"",
       confirm_password:""
@@ -40,19 +40,7 @@ const CorporateEmpRegistration = () => {
   return (
     <div className='mt-30'>
       <form>
-        <label htmlFor="dropdown">Insurance Co.* :</label>
-        <select id="dropdown" value={selectedOption} onChange={handleChange} className="w-full border-b ml-10 border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2">
-          <option value="" className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho" >{selectedOption}</option>
-          {options.map((option) => (
-            <option key={option.value} value={option.value} className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho outline-none border-none">
-              {option.label}
-            </option>
-          ))}
-        </select>
-        <br />
-        <br />
-        <br />
-        <label htmlFor="dropdown">Insurance Co.* :</label>
+      <label htmlFor="dropdown">Corporate Name :</label>
         <select id="dropdown" value={selectedOption} onChange={handleChange} className="w-full border-b ml-10 border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2">
           <option value="" className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho" >{selectedOption}</option>
           {options.map((option) => (
@@ -91,9 +79,9 @@ const CorporateEmpRegistration = () => {
 
         <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
         <input
-            name="Agent Code"
+            name="Policy Number"
             type="text"
-            placeholder="Agent Code"
+            placeholder="Policy Number"
             defaultValue={data.policy_number}
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue})
@@ -102,10 +90,10 @@ const CorporateEmpRegistration = () => {
           />
 
           <input
-            name="Email"
-            type="email"
-            placeholder="Email Address"
-            defaultValue={data.Email_Address}
+            name="Card Number"
+            type="text"
+            placeholder="Card Number"
+            defaultValue={data.card_number}
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue })
             }
@@ -114,10 +102,33 @@ const CorporateEmpRegistration = () => {
         </div>
         <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
           <input
-            name="Mobile No"
+            name="Email ID"
+            type="text"
+            placeholder="Email ID"
+            defaultValue={data.email_address}
+            onChange={(e) =>
+              setData({ ...data, [e.target.name]: e.target.defaultValue })
+            }
+            className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+          />
+
+          <input
+            name="Employee ID"
+            type="text"
+            placeholder="Employee ID"
+            defaultValue={data.employee_id}
+            onChange={(e) =>
+              setData({ ...data, [e.target.name]: e.target.defaultValue })
+            }
+            className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+          />
+        </div>
+        <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
+          <input
+            name="Mobile Number"
             type="text"
             placeholder="Mobile Number"
-            defaultValue={data.Mobile_Number}
+            defaultValue={data.mobile_number}
             onChange={(e) =>
               setData({ ...data, [e.target.name]: e.target.defaultValue })
             }
