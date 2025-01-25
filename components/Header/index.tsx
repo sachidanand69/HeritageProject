@@ -1,14 +1,16 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import React, {useEffect, useState } from "react";
 import HeritageLogo from "../HeritageLogo/HeritageLogo";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
-const Header = () => {
+
+
+const Header:React.FC = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [dropdownToggler, setDropdownToggler] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -16,7 +18,19 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(""); // Default option
 
-  const options = [{ title: "member", path: "/auth/signin", submenu: { memberID: "User ID", password: "Password1", paths: "/auth/member" } }, { title: "agent", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password2", paths: "/auth/member" }  }, { title: "corporate", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password3", paths: "/auth/member" } }];
+
+  const options1 = [{ title: "Member", path: "/auth/signin", submenu: { memberID: "User ID", password: "Password1", paths: "/auth/member" } },
+                   { title: "Agent", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password2", paths: "/auth/agent" }  },
+                   { title: "Corporate", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password3", paths: "/auth/corporate"} }];
+
+  const router=useRouter();
+
+  const handleNavigation = (item:{title:string, path:string, submenu: any}) => {
+    const queryString = new URLSearchParams(item.submenu).toString();
+    console.log(item.submenu.paths);
+    router.push(`${item.path}?${queryString}`);
+    // router.replace(item.path);
+  };
 
   const toggleDropdown = () => {
     setDropdownToggler((prev) => !prev);
@@ -193,12 +207,9 @@ const Header = () => {
                 <ul
                   className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                 >
-                  {options.map((item, key) => (
+                  {options1.map((item, key) => (
                     <li key={key} className="hover:text-primary">
-                      <Link href={{
-                        pathname: item.path,
-                        query: item.submenu,
-                      }}>{item.title}</Link>
+                      <a href="#" onClick={(e)=>{e.preventDefault(); handleNavigation(item)}}>{item.title}</a>
                     </li>
                   ))}
                 </ul>

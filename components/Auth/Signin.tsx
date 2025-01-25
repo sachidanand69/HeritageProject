@@ -4,34 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 const Signin = () => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
 
-  const [queryParams, setQueryParams] = useState({
-    memberID: '',
-    password: '',
-    paths: '',
-  });
-
-  console.log(window.location.href)
-  useEffect(() => {
-    // Get the full URL from window.location.href
-    const url = new URL(window.location.href);
-    
-    // Use URLSearchParams to extract query parameters
-    const params = new URLSearchParams(url.search);
-    
-    // Extract query parameters (or set default values if they don't exist)
-    setQueryParams({
-      memberID: params.get('memberID') || '',
-      password: params.get('password') || '',
-      paths: params.get('paths') || '',
-    });
-  }, []);
-
+  const getparam=useSearchParams();
+  const paths=getparam.get('paths');
 
   return (
     <>
@@ -77,7 +58,7 @@ const Signin = () => {
             </h2>
             <div className="flex flex-col">
               <div className="flex items-center gap-8">
-                <button
+                {/* <button
                   aria-label="sign with google"
                   className="text-body-color dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
                 >
@@ -115,9 +96,9 @@ const Signin = () => {
                     </svg>
                   </span>
                   Signup with Google
-                </button>
+                </button> */}
 
-                <button
+                {/* <button
                   aria-label="signup with github"
                   className="text-body-color dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-primary dark:hover:bg-primary/5 dark:hover:text-primary dark:hover:shadow-none"
                 >
@@ -133,31 +114,32 @@ const Signin = () => {
                     </svg>
                   </span>
                   Signup with Github
-                </button>
+                </button> */}
               </div>
             </div>
-            <div className="mb-10 flex items-center justify-center">
+            {/* <div className="mb-10 flex items-center justify-center">
               <span className="dark:bg-stroke-dark hidden h-[1px] w-full max-w-[200px] bg-stroke dark:bg-strokedark sm:block"></span>
               <p className="text-body-color dark:text-body-color-dark w-full px-5 text-center text-base">
                 Or, login with your email
               </p>
               <span className="dark:bg-stroke-dark hidden h-[1px] w-full max-w-[200px] bg-stroke dark:bg-strokedark sm:block"></span>
-            </div>
+            </div> */}
 
             <form>
               <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
                 <input
                   type="text"
-                  placeholder={queryParams.memberID}
+                  placeholder="User ID"
                   name="email"
                   value={data.email}
                   onChange={(e) => setData({ ...data, email: e.target.value })}
-                  className="w-full border-b border-stroke !bg-white pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:!bg-black dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                  className="w-full border-b border-stroke !bg-white pb-5.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:!bg-black dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                 />
-
+                </div>
+                <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
                 <input
                   type="password"
-                  placeholder={queryParams.password}
+                  placeholder="Password"
                   name="password"
                   value={data.password}
                   onChange={(e) =>
@@ -175,7 +157,7 @@ const Signin = () => {
                       type="checkbox"
                       className="peer sr-only"
                     />
-                    <span className="border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
+                    {/* <span className="border-gray-300 bg-gray-100 text-blue-600 dark:border-gray-600 dark:bg-gray-700 group mt-1 flex h-5 min-w-[20px] items-center justify-center rounded peer-checked:bg-primary">
                       <svg
                         className="opacity-0 peer-checked:group-[]:opacity-100"
                         width="10"
@@ -191,13 +173,13 @@ const Signin = () => {
                           fill="white"
                         />
                       </svg>
-                    </span>
-                    <label
+                    </span> */}
+                    {/* <label
                       htmlFor="default-checkbox"
                       className="flex max-w-[425px] cursor-pointer select-none pl-3"
                     >
                       Keep me signed in
-                    </label>
+                    </label> */}
                   </div>
 
                   <a href="#" className="hover:text-primary">
@@ -231,7 +213,7 @@ const Signin = () => {
                   Don't have an account?{" "}
                   <Link
                     className="text-black hover:text-primary dark:text-white hover:dark:text-primary"
-                    href={queryParams.paths}
+                    href={`${paths}`}
                   >
                     Sign Up
                   </Link>
