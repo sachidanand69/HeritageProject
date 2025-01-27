@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import Slider from "../Slider/slider";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -68,6 +69,7 @@ const Hero = () => {
             </div>
 
             <div className="animate_right hidden md:w-1/2 lg:block">
+            <Slider/>
               {/* <div className="relative 2xl:-mr-7.5">
                 <Image
                   src="/images/shape/shape-01.png"
