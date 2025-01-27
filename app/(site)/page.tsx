@@ -17,8 +17,8 @@ import AgentRegistration from "@/components/AgentRegistration";
 import { BrowserRouter } from "react-router-dom";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-  description: "This is Home for Solid Pro",
+  title: "Heritage Healthcare TPA",
+  description: "",
   // other metadata
 };
 
@@ -29,14 +29,14 @@ export default function Home() {
       
       <Feature />
       <About />
-      <FeaturesTab />
-      <FunFact />
-      <Integration />
+      {/* <FeaturesTab /> */}
+      {/* <FunFact /> */}
+      {/* <Integration /> */}
       <CTA />
       <FAQ />
       {/* <Testimonial />
       <Pricing /> */}
-      <Blog />
+      {/* <Blog /> */}
       <Brands />
       <Contact />
     </main>

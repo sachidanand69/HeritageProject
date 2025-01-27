@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import { createContext, useContext, useState } from "react";
 
 // type StoreContextType = {
@@ -9,6 +10,7 @@ const StoreContextProvider=({children}:{
     children: React.ReactNode;
   })=>{
 
+       const [links, setlinks]=useState<string>("hello");
        const [options,setOptions]=useState<{ value: number; label: string }[]>( [{ value: 1, label: "ICICI Lamboard GIC LTD" },
         { value: 2, label: "IFFCO-TOKIO"}, 
         { value: 3, label: "Indian Bank Association [In National Insurance Company]"}, 

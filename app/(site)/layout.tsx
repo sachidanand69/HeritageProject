@@ -26,12 +26,12 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="light"
         >
-          <Lines />
-          <Header />
-          <ToasterContext />
           <StoreContextProvider>
             {children}
           </StoreContextProvider>
+          <Lines />
+          <Header />
+          <ToasterContext />
           <Footer />
           <ScrollToTop />
         </ThemeProvider>

@@ -63,4 +63,5 @@ const contactData=[{
     Email:" heritage_health@bajoria.in",
     websites:"www.heritagehealthtpa.com",
 },
-]
+];
+export default contactData;

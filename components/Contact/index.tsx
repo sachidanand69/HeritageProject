@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import contactData from './ContactData';
+
 
 const Contact = () => {
   /**
@@ -182,14 +184,14 @@ const Contact = () => {
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Our Loaction
                 </h3>
-                <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+                <p>{contactData[0].address}</p>
               </div>
               <div className="5 mb-7">
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Email Address
                 </h3>
                 <p>
-                  <a href="#">yourmail@domainname.com</a>
+                  <a href="#">{contactData[0].Email}</a>
                 </p>
               </div>
               <div>
@@ -197,7 +199,7 @@ const Contact = () => {
                   Phone Number
                 </h4>
                 <p>
-                  <a href="#">+009 42334 6343 843</a>
+                  <a href="#">{contactData[0].phone}</a>
                 </p>
               </div>
             </motion.div>
