@@ -1,7 +1,0 @@
-{
-  "/(site)/page": "app/(site)/page.js",
-  "/(site)/auth/signin/page": "app/(site)/auth/signin/page.js",
-  "/(site)/auth/member/page": "app/(site)/auth/member/page.js",
-  "/(site)/auth/agent/page": "app/(site)/auth/agent/page.js",
-  "/(site)/auth/corporate/page": "app/(site)/auth/corporate/page.js"
-}
