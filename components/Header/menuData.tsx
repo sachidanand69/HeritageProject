@@ -14,14 +14,14 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "About Us",
         newTab: false,
         path: "/blog",
       },
       
       {
         id: 35,
-        title: "Features",
+        title: "Award & Certificates",
         newTab: false,
         path: "/#features",
       },

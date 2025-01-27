@@ -2,11 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import React, {useEffect, useState } from "react";
+import React, {useContext, useEffect, useState } from "react";
 import HeritageLogo from "../HeritageLogo/HeritageLogo";
+import { StoreContext } from "@/Context/context";
 
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { useAppContext} from "@/Context/context";
 
 
 
@@ -17,13 +19,16 @@ const Header:React.FC = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(""); // Default option
+  const router=useRouter();
+
+  
 
 
   const options1 = [{ title: "Member", path: "/auth/signin", submenu: { memberID: "User ID", password: "Password1", paths: "/auth/member" } },
                    { title: "Agent", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password2", paths: "/auth/agent" }  },
                    { title: "Corporate", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password3", paths: "/auth/corporate"} }];
 
-  const router=useRouter();
+  
 
   const handleNavigation = (item:{title:string, path:string, submenu: any}) => {
     const queryString = new URLSearchParams(item.submenu).toString();

@@ -28,6 +28,7 @@ const CorporateEmpRegistration:React.FC = () => {
   
 
     const {options}=useAppContext();
+    
 
     const [selectedOption, setSelectedOption] = useState<string>("--Select Insurance Company--");
     

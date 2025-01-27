@@ -13,7 +13,7 @@ const Feature = () => {
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
-              title: "Main Feature",
+              title: "Welcome",
               subtitle: "WELCOME",
               description: `Heritage Health Insurance TPA Pvt Ltd (Heritage Health) believes in quality service and customer satisfaction through its efficient & timely service delivery. As a TPA we provide Health Services to the Health Insurance policyholders of Indian Insurance companies. The company was established in the year 1998 and TPAs were introduced in India in 2001 through “Insurance Regulatory and Development Authority of India” (IRDAI) regulations, after opening up of the Insurance Sector in the country. `,
             }}
