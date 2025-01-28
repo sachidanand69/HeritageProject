@@ -31,11 +31,11 @@ const CTA = () => {
               <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
                 Join With Us Today & Increase Your Productivity
               </h2>
-              <p>
+              {/* <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 convallis tortor eros. Donec vitae tortor lacus. Phasellus
                 aliquam ante in maximus.
-              </p>
+              </p> */}
             </motion.div>
             <motion.div
               variants={{
@@ -55,7 +55,8 @@ const CTA = () => {
               viewport={{ once: true }}
               className="animate_right lg:w-[45%]"
             >
-              <div className="flex items-center justify-end xl:justify-between">
+              <div className="flex items-center gap-8">
+                {/* Image Section */}
                 <Image
                   width={299}
                   height={299}
@@ -63,26 +64,70 @@ const CTA = () => {
                   alt="Saly"
                   className="hidden xl:block"
                 />
-                <a
-                  href="/auth/signup"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
-                >
-                  Sign up free
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-dark.svg"
-                    alt="Arrow"
-                    className="dark:hidden"
-                  />
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-light.svg"
-                    alt="Arrow"
-                    className="hidden dark:block"
-                  />
-                </a>
+
+                {/* Anchor Buttons Section */}
+                <div className="flex flex-col gap-4">
+                  <a
+                    href="/auth/signup"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
+                  >
+                    Sign up as Member
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-dark.svg"
+                      alt="Arrow"
+                      className="dark:hidden"
+                    />
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-light.svg"
+                      alt="Arrow"
+                      className="hidden dark:block"
+                    />
+                  </a>
+                  <a
+                    href="/auth/signup"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
+                  >
+                    Sign up as Agent
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-dark.svg"
+                      alt="Arrow"
+                      className="dark:hidden"
+                    />
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-light.svg"
+                      alt="Arrow"
+                      className="hidden dark:block"
+                    />
+                  </a>
+                  <a
+                    href="/auth/signup"
+                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
+                  >
+                    Sign up as Corporate
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-dark.svg"
+                      alt="Arrow"
+                      className="dark:hidden"
+                    />
+                    <Image
+                      width={20}
+                      height={20}
+                      src="/images/icon/icon-arrow-light.svg"
+                      alt="Arrow"
+                      className="hidden dark:block"
+                    />
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>

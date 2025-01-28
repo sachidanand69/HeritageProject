@@ -29,13 +29,13 @@ const About = () => {
               className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
               <Image
-                src="/images/about/about-light-01.png"
+                src="/images/global/image-6.webp"
                 alt="About"
                 className="dark:hidden"
                 fill
               />
               <Image
-                src="/images/about/about-dark-01.png"
+                src="/images/global/image-6.webp"
                 alt="About"
                 className="hidden dark:block"
                 fill
@@ -68,8 +68,8 @@ const About = () => {
                 </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+              The Card Claim Status feature provides users with real-time updates 
+              on the status of their healthcare claims.
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
@@ -83,7 +83,7 @@ const About = () => {
                     {/* React 18, Next.js 13 and TypeScript */}
                     Search by CCN No
                   </h3>
-                  <p>Ut ultricies lacus non fermentum ultrices.</p>
+                  <p>The Search by CCN No feature allows users to quickly retrieve claim details by entering the unique Claim Control Number (CCN).</p>
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
@@ -97,7 +97,7 @@ const About = () => {
                     {/* Fully Customizable */}
                     ECARD DOWNLOAD
                   </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
+                  <p>The Ecard Download feature allows users to easily download electronic cards (ecards) for various purposes.</p>
                 </div>
               </div>
             </motion.div>
@@ -136,8 +136,7 @@ const About = () => {
                 </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+              The Downloading Mobile Application feature allows users to easily access and install the app on their mobile devices, ensuring a smooth and hassle-free experience.
               </p>
               <div>
                 <a
@@ -177,16 +176,23 @@ const About = () => {
               className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
             >
               <Image
-                src="./images/about/about-light-02.svg"
+                src="http://localhost:3000/images/about/Home.jpg"
                 alt="About"
                 className="dark:hidden"
-                fill
+                // fill
+                width={250}
+                height={520}
+                style={{margin:"0 auto"}}
               />
               <Image
-                src="./images/about/about-dark-02.svg"
+                src="http://localhost:3000/images/about/Home.jpg"
                 alt="About"
                 className="hidden dark:block"
-                fill
+                // fill
+                width={250}
+                height={520}
+                style={{margin:"0 auto"}}
+
               />
             </motion.div>
           </div>
