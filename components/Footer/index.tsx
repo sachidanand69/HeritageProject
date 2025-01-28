@@ -28,7 +28,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="/" className="relative">
+                {/* <a href="/" className="relative">
                   <Image
                     width={110}
                     height={80}
@@ -43,10 +43,18 @@ const Footer = () => {
                     alt="Logo"
                     className="hidden dark:block"
                   />
-                </a>
+                </a> */}
+                 <h1 className="mb-5 pr-16 text-lg font-bold text-black dark:text-white xl:text-hero " style={{fontSize: 30}}>
+                Heritage Health Insurance TPA<br /> Pvt. Ltd.
+                {/* <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
+                  SaaS
+                </span> */}
+              </h1>
 
                 <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                IRDAI license No 008(Valid Till 20/03/2026)
+CIN U85195WB1998PTC088562
+An ISO 9001:2015 Company
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -56,7 +64,7 @@ const Footer = () => {
                   href="#"
                   className="text-itemtitle font-medium text-black dark:text-white"
                 >
-                  hello@solid.com
+                  heritage_health@bajoria.in
                 </a>
               </motion.div>
 
@@ -300,9 +308,14 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
+              <div style={{textAlign:"center"}}>
               <p>
-                &copy; {new Date().getFullYear()} Powerd By Digishield Technologies Pvt Ltd
+                &copy; {new Date().getFullYear()} Heritage Health Insurance TPA Pvt. Ltd.
               </p>
+              <p>
+                  Powered By <a href="https://www.digishieldtechnologies.com/" target="_blank" style={{color:"#60A5FA"}}>Digishield Technologies Pvt Ltd</a>
+              </p>
+              </div>
             </motion.div>
 
             <motion.div
