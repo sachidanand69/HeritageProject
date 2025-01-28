@@ -68,7 +68,7 @@ const CTA = () => {
                 {/* Anchor Buttons Section */}
                 <div className="flex flex-col gap-4">
                   <a
-                    href="/auth/signup"
+                    href="/auth/member"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                   >
                     Sign up as Member
@@ -88,7 +88,7 @@ const CTA = () => {
                     />
                   </a>
                   <a
-                    href="/auth/signup"
+                    href="/auth/agent"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                   >
                     Sign up as Agent
@@ -108,7 +108,7 @@ const CTA = () => {
                     />
                   </a>
                   <a
-                    href="/auth/signup"
+                    href="/auth/corporate"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
                   >
                     Sign up as Corporate
