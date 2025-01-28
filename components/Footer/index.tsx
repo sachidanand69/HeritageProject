@@ -51,11 +51,11 @@ const Footer = () => {
                 </span> */}
               </h1>
 
-                <p className="mb-10 mt-5">
-                IRDAI license No 008(Valid Till 20/03/2026)
-CIN U85195WB1998PTC088562
-An ISO 9001:2015 Company
-                </p>
+{/*                <p className="mb-10 mt-5">*/}
+{/*                IRDAI license No 008(Valid Till 20/03/2026)*/}
+{/*CIN U85195WB1998PTC088562*/}
+{/*An ISO 9001:2015 Company*/}
+{/*                </p>*/}
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
