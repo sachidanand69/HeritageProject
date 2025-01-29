@@ -1,18 +1,18 @@
 import { Metadata } from "next";
-import GrievanceForm from "@/components/Greivances";
+import AgentCode from "@/components/AgentCodeCheck";
 export const metadata: Metadata = {
-  title: "Grievances",
+  title: "Agent Code",
   description: "This is Login page for Startup Pro",
   // other metadata
 };
 
-const Greivances = () => {
+const AgentCodeCheck = () => {
   
   return (
     <>
-       <GrievanceForm/>
+       <AgentCode/>
     </>
   );
 };
 
-export default Greivances;
+export default AgentCodeCheck;

@@ -24,9 +24,10 @@ const Header:React.FC = () => {
   
 
 
-  const options1 = [{ title: "Member", path: "/auth/signin", submenu: { memberID: "User ID", password: "Password1", paths: "/auth/member" } },
-                   { title: "Agent", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password2", paths: "/auth/agent" }  },
-                   { title: "Corporate", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password3", paths: "/auth/corporate"} }];
+  const options1 = [{ title: "Insured", path: "/auth/signin", submenu: { memberID: "User ID", password: "Password1", paths: "/auth/member" } },
+                   { title: "Agent/Broker", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password2", paths: "/auth/agent_code_check" }  },
+                   { title: "Corporate", path: "/auth/signin",submenu: { memberID: "User ID", password: "Password3", paths: "/auth/corporate"}},
+                   { title: "Hospital", path: "https://www.heritagehealthtpa.in/HospitalPortal/",submenu: {}}];
 
   
 

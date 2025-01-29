@@ -1,6 +1,6 @@
 .BigDiv {
     margin: 0; /* Remove any external margin */
-    height: 40px;
+    height: 45px;
     width: 100px;
     padding: 0; /* Ensure no internal padding */
     /* background-color: grey; */
@@ -9,17 +9,17 @@
 }
 
 .BigDiv .MidDiv {
-    height: 20px;
-    width: 100px;
+    height: 13px;
+    width: 80px;
     display: flex; /* Flexbox for the child divs */
     padding: 0; /* No internal padding */
-    margin: 0; /* Ensure no external margin */
+    margin-left: 10px; /* Ensure no external margin */
     background-color: transparent; /* Uncomment or set if needed */
 }
 
 .BigDiv .MidDiv div {
-    height: 16px;
-    width: 16px;
+    height: 13px;
+    width: 13px;
     padding: 0; /* No internal padding */
     margin: 0; /* Ensure no external margin */
     background-color: #34b1eb;
@@ -44,10 +44,10 @@
 }
 .text-container {
     position: relative;
-    margin-top: 5px;
+    /* margin-top: 2px; */
     width: 100%;
     display: inline-block;
-    font-size: 10px;
+    font-size: 9px;
     color: #34b1eb;
     font-weight: bold;
     text-align: center;

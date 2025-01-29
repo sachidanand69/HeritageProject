@@ -183,7 +183,10 @@ const Signin = () => {
                   </div>
 
                   <a href="#" className="hover:text-primary">
-                    Forgot Password?
+                    Forget Password?
+                  </a>
+                  <a href="#" className="hover:text-primary">
+                    Forget Username?
                   </a>
                 </div>
 

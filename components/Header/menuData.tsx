@@ -80,7 +80,7 @@ const menuData: Menu[] = [
     submenu: [
       {
         id: 31,
-        title: "UB Arogyadaan",
+        title: "Claim Search",
         newTab: false,
         path: "http://223.31.103.204/CorporateECard/?CORPO=ANDHRA",
       },
@@ -102,18 +102,18 @@ const menuData: Menu[] = [
         newTab: false,
         path: "http://www.heritagehealthtpa.in/HospitalPortal/",
       },
-      // {
-      //   id: 35.1,
-      //   title: "Support",
-      //   newTab: false,
-      //   path: "/support",
-      // },
-      // {
-      //   id: 36,
-      //   title: "404",
-      //   newTab: false,
-      //   path: "/error",
-      // },
+      {
+        id: 35.1,
+        title: "Download E-Card Details",
+        newTab: false,
+        path: "/support",
+      },
+      {
+        id: 36,
+        title: "Downloads",
+        newTab: false,
+        path: "/error",
+      },
     ],
   },
 
@@ -122,6 +122,12 @@ const menuData: Menu[] = [
     title: "Careers",
     newTab: false,
     path: "/support",
+  },
+  {
+    id: 5,
+    title: "Grievances",
+    newTab: false,
+    path: "/auth/grievances",
   },
 ];
 

@@ -44,18 +44,21 @@ const Footer = () => {
                     className="hidden dark:block"
                   />
                 </a> */}
-                 <h1 className="mb-5 pr-16 text-lg font-bold text-black dark:text-white xl:text-hero " style={{fontSize: 30}}>
-                Heritage Health Insurance TPA<br /> Pvt. Ltd.
-                {/* <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  SaaS
-                </span> */}
-              </h1>
+                <h1 className="mb-5 pr-16 text-lg font-bold text-black dark:text-white xl:text-hero text-2xl sm:text-3xl md:text-4xl lg:text-5xl" style={{ fontSize: 30, lineHeight: "1.1" }}>
+                  Heritage Health
+                  {/* <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
+    SaaS
+  </span> */}
+                </h1>
+                <span className="text-justify text-lg sm:text-xl md:text-2xl" style={{ fontSize: 20 }}>
+                  Insurance TPA Pvt. Ltd.
+                </span>
 
-{/*                <p className="mb-10 mt-5">*/}
-{/*                IRDAI license No 008(Valid Till 20/03/2026)*/}
-{/*CIN U85195WB1998PTC088562*/}
-{/*An ISO 9001:2015 Company*/}
-{/*                </p>*/}
+                <p className="mb-10 mt-5">
+                  IRDAI license No 008(Valid Till 20/03/2026)
+                  CIN U85195WB1998PTC088562
+                  An ISO 9001:2015 Company
+                </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
@@ -105,7 +108,7 @@ const Footer = () => {
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Product
+                        Downloads
                       </a>
                     </li>
                     <li>
@@ -118,10 +121,10 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/auth/grievances"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Pricing
+                        Grievances
                       </a>
                     </li>
                   </ul>
@@ -308,13 +311,13 @@ const Footer = () => {
               viewport={{ once: true }}
               className="animate_top"
             >
-              <div style={{textAlign:"center"}}>
-              <p>
-                &copy; {new Date().getFullYear()} Heritage Health Insurance TPA Pvt. Ltd.
-              </p>
-              <p>
-                  Powered By <a href="https://www.digishieldtechnologies.com/" target="_blank" style={{color:"#60A5FA"}}>Digishield Technologies Pvt Ltd</a>
-              </p>
+              <div style={{ textAlign: "center" }}>
+                <p>
+                  &copy; {new Date().getFullYear()} Heritage Health Insurance TPA Pvt. Ltd.
+                </p>
+                <p>
+                  Powered By <a href="https://www.digishieldtechnologies.com/" target="_blank" style={{ color: "#60A5FA" }}>Digishield Technologies Pvt Ltd</a>
+                </p>
               </div>
             </motion.div>
 

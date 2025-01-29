@@ -1,18 +1,18 @@
 import { Metadata } from "next";
-import GrievanceForm from "@/components/Greivances";
+import HealthTool from "@/components/HealthTool";
 export const metadata: Metadata = {
-  title: "Grievances",
+  title: "Health Tools",
   description: "This is Login page for Startup Pro",
   // other metadata
 };
 
-const Greivances = () => {
+const HealthTools = () => {
   
   return (
     <>
-       <GrievanceForm/>
+       <HealthTool/>
     </>
   );
 };
 
-export default Greivances;
+export default HealthTools;
