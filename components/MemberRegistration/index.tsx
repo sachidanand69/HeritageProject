@@ -14,6 +14,8 @@ const MemberRegistration = () => {
     lastName: "",
     Email_Address: "",
     Mobile_Number: "",
+    Policy_Number: "",
+    Card_Number: "",
     User_Name: "",
     Member_ID: "",
     password: "",
@@ -24,10 +26,17 @@ const MemberRegistration = () => {
   const { options } = useAppContext();
 
   const [selectedOption, setSelectedOption] = useState<string>("--Select Insurance Company--");
+  const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     setSelectedOption(value);
+  };
+
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(event.target.checked);
+    console.log('Checkbox is checked:', event.target.checked);
   };
 
 
@@ -58,7 +67,7 @@ const MemberRegistration = () => {
         </div>
 
         <h2 className="mb-15 text-center text-3xl font-semibold text-black dark:text-white xl:text-sectiontitle2">
-          Member Registration
+          Insured Registration
         </h2>
         <div>
           <form>
@@ -112,6 +121,29 @@ const MemberRegistration = () => {
             </div>
             <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
               <input
+                name="Policy Number"
+                type="text"
+                placeholder="Policy Number"
+                defaultValue={data.Policy_Number}
+                onChange={(e) =>
+                  setData({ ...data, [e.target.name]: e.target.defaultValue })
+                }
+                className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+              />
+
+              <input
+                name="Card Number"
+                type="text"
+                placeholder="Card Number"
+                defaultValue={data.Member_ID}
+                onChange={(e) =>
+                  setData({ ...data, [e.target.name]: e.target.defaultValue })
+                }
+                className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+              />
+            </div>
+            <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
+              <input
                 name="User Name"
                 type="text"
                 placeholder="User Name"
@@ -125,7 +157,7 @@ const MemberRegistration = () => {
               <input
                 name="Member Id"
                 type="text"
-                placeholder="Member ID"
+                placeholder="Employee ID"
                 defaultValue={data.Member_ID}
                 onChange={(e) =>
                   setData({ ...data, [e.target.name]: e.target.defaultValue })
@@ -156,6 +188,17 @@ const MemberRegistration = () => {
                 className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
               />
             </div>
+            <div className="mb-7.5 flex flex-col gap-7.5 lg:mb-12.5 lg:flex-row lg:justify-between lg:gap-14">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
+                />
+                 Sinior Citizen
+              </label>
+            </div>
+
 
             <div className="flex flex-wrap gap-10 ml-0 xl:gap-15">
               <div className="mb-4 flex items-center">
