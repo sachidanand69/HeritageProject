@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 // type StoreContextType = {
 //     options: { value: number; label: string }[];
@@ -53,3 +53,13 @@ export default StoreContextProvider;
 export function useAppContext(){
     return useContext(StoreContext);
 }
+
+export function useRandom() {
+    const [randomValue, setRandomValue] = useState(0);
+  
+    useEffect(()=>{
+          setRandomValue(Math.floor(Math.random()))
+        },[]) // Runs only once after the initial render
+  
+    return randomValue;
+  }

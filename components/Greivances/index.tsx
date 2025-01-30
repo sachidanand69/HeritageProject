@@ -1,4 +1,6 @@
 "use client"
+import { useAppContext } from "@/Context/context";
+import Image from "next/image";
 import React, { useState } from "react";
 
 interface FormValues {
@@ -46,35 +48,52 @@ const GrievanceForm: React.FC = () => {
     console.log(formData); // Here, you can handle form submission, e.g., make API calls.
   };
 
+  const {options}=useAppContext();
+
   return (
     <section className="pb-12.5 pt-32.5 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
+      <div className="relative z-1 mx-auto max-w-c-1016 px-7.5 pb-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
+                      <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42]"></div>
+                      <div className="absolute bottom-17.5 left-0 -z-1 h-1/3 w-full">
+                        <Image
+                          src="/images/shape/shape-dotted-light.svg"
+                          alt="Dotted"
+                          className="dark:hidden"
+                          fill
+                        />
+                        <Image
+                          src="/images/shape/shape-dotted-dark.svg"
+                          alt="Dotted"
+                          className="hidden dark:block"
+                          fill
+                        />
+                      </div>
+              
     <div className="max-w-2xl mx-auto py-8">
       <h2 className="text-2xl font-semibold mb-6">Grievance Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Nature of Grievance *</label>
           <select
             name="grievance"
             value={formData.grievance}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
           >
-            <option value="">Please Select</option>
-            <option value="Issue">Issue</option>
-            <option value="Query">Query</option>
-            <option value="Complaint">Complaint</option>
+            <option value="">Nature of Grievance *</option>
+            <option value="Issue">CARD</option>
+            <option value="Query">CLAIM</option>
+            <option value="Complaint">Others</option>
           </select>
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Title *</label>
           <select
             name="title"
             value={formData.title}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
           >
-            <option value="">Please Select</option>
+            <option value="">Select Title</option>
             <option value="Mr">Mr.</option>
             <option value="Ms">Ms.</option>
             <option value="Mrs">Mrs.</option>
@@ -84,59 +103,58 @@ const GrievanceForm: React.FC = () => {
 
         <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">First Name *</label>
             <input
               type="text"
               name="firstName"
               value={formData.firstName}
+              placeholder="First Name *"
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Middle Name</label>
             <input
               type="text"
               name="middleName"
               value={formData.middleName}
+              placeholder="Middle Name"
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Last Name *</label>
             <input
               type="text"
               name="lastName"
               value={formData.lastName}
+              placeholder="Last Name *"
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">EmpID (For Corporate Employee only)</label>
             <input
               type="text"
               name="empID"
               value={formData.empID}
+              placeholder="EmpID "
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             />
           </div>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Insurance Company *</label>
+        {/* <div className="mb-4">
           <select
             name="insuranceCo"
             value={formData.insuranceCo}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             required
           >
             <option value="">--Select Insurance Company--</option>
@@ -144,62 +162,62 @@ const GrievanceForm: React.FC = () => {
             <option value="CompanyB">Company B</option>
             <option value="CompanyC">Company C</option>
           </select>
-        </div>
+        </div> */}
 
         <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Policy Number</label>
             <input
               type="text"
               name="policyNumber"
               value={formData.policyNumber}
+              placeholder="Policy Number"
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Card Number</label>
             <input
               type="text"
               name="cardNumber"
               value={formData.cardNumber}
+              placeholder="Card Number"
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Claim Number</label>
             <input
               type="text"
               name="claimNumber"
               value={formData.claimNumber}
+              placeholder="Claim Number"
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Contact No</label>
             <input
               type="text"
               name="contactNo"
               value={formData.contactNo}
+              placeholder="Contact No"
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             />
           </div>
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Email Address *</label>
           <input
             type="email"
             name="emailAddress"
             value={formData.emailAddress}
+            placeholder="Email Address *"
             onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
             required
           />
         </div>
@@ -221,6 +239,7 @@ const GrievanceForm: React.FC = () => {
           Submit
         </button>
       </form>
+    </div>
     </div>
     </section>
   );
