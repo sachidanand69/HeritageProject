@@ -50,7 +50,7 @@ const Footer = () => {
     SaaS
   </span> */}
                 </h1>
-                <span className="text-justify text-lg sm:text-xl md:text-2xl" style={{ fontSize: 20 }}>
+                <span className="text-justify font-bold dark:text-white text-lg sm:text-xl md:text-2xl" style={{ fontSize: 20 }}>
                   Insurance TPA Pvt. Ltd.
                 </span>
 
@@ -340,6 +340,31 @@ const Footer = () => {
               className="animate_top"
             >
               <ul className="flex items-center gap-5">
+                <li>
+                  <a href="#" aria-label="WhatsApp icon">
+                    <svg
+                        className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+
+                      <g clipPath="url(#clip0_48_1499)">
+                        <path
+                            d="M20.52 3.48A11.72 11.72 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.56 5.94L0 24l6.3-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.18-1.26-6.24-3.48-8.52ZM12 21.3a9.25 9.25 0 0 1-4.8-1.32l-.36-.21-3.72.96 1-3.6-.24-.36A9.27 9.27 0 0 1 2.7 12a9.3 9.3 0 0 1 15.84-6.6A9.3 9.3 0 0 1 12 21.3Zm5.43-7.05c-.3-.15-1.8-.9-2.1-1-.27-.1-.48-.15-.69.15-.21.3-.81 1-1 1.2-.18.21-.36.24-.66.09-.3-.15-1.26-.45-2.4-1.44a9.06 9.06 0 0 1-1.65-2.01c-.18-.3-.03-.45.12-.6.12-.12.3-.33.42-.48.09-.15.15-.27.24-.42s.06-.3-.03-.45c-.09-.15-.69-1.65-.93-2.28-.24-.57-.48-.48-.69-.48h-.57c-.18 0-.45.06-.69.3-.24.24-.9.87-.9 2.1s.93 2.43 1.05 2.61c.12.18 1.83 2.79 4.41 3.93 1.65.72 2.28.78 3.09.69.48-.06 1.5-.6 1.71-1.17.21-.57.21-1.05.15-1.17-.06-.09-.24-.15-.51-.3Z"
+                            fill=""
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_48_1499">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
                 <li>
                   <a href="#" aria-label="social icon">
                     <svg

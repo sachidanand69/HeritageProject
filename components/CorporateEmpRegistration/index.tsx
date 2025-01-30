@@ -7,6 +7,7 @@ import Signup from '../Auth/Signup';
 import Signin from '../Auth/Signin';
 import { useAppContext } from '@/Context/context';
 import { useRouter } from 'next/navigation';
+import ReCaptcha from "@/components/reCaptcha";
 
 interface FormValues {
   firstName: string;
@@ -39,6 +40,8 @@ const CorporateEmpRegistration: React.FC = () => {
     password: "",
     confirm_password: ""
   });
+  const [isVerified, setIsVerified] = useState(false);
+
   const router = useRouter();
   console.log(router);
 
@@ -107,6 +110,10 @@ const CorporateEmpRegistration: React.FC = () => {
   const changeStating = () => {
     state === null ? <Signup /> : null;
   }
+
+  const handleDataChange = (data: boolean) => {
+    setIsVerified(data);
+  };
 
   return (
     <section className="pb-12.5 pt-32.5 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
@@ -276,6 +283,7 @@ const CorporateEmpRegistration: React.FC = () => {
               />
 
             </div>
+            <ReCaptcha onDataChange={handleDataChange}/>
 
             <div className="flex flex-wrap gap-10 ml-0 xl:gap-15">
               <div className="mb-4 flex items-center">
@@ -289,10 +297,12 @@ const CorporateEmpRegistration: React.FC = () => {
               >
                 Back
               </button>
-              <Link href="/auth/signin">
+              {/*<Link href="/auth/signin">*/}
                 <button
                   aria-label="signup with email and password"
                   className="inline-flex items-center gap-2.5 ml-90 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                  disabled={!isVerified}
+
                 >
                   Register
                   <svg
@@ -309,7 +319,7 @@ const CorporateEmpRegistration: React.FC = () => {
                     />
                   </svg>
                 </button>
-              </Link>
+              {/*</Link>*/}
             </div>
           </form>
         </div>

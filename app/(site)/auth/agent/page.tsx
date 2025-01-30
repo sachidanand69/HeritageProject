@@ -1,5 +1,5 @@
 import AgentRegistration from "@/components/AgentRegistration";
-import React, { useState } from "react";
+import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

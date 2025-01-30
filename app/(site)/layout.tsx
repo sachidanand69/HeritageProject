@@ -12,6 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 import ToasterContext from "../context/ToastContext";
 import StoreContextProvider from "@/Context/context";
 import { BrowserRouter } from "react-router-dom";
+import {Cursor} from "@/components/Cursor";
+import React from "react";
 
 export default function RootLayout({
   children,
@@ -27,6 +29,7 @@ export default function RootLayout({
           defaultTheme="light"
         >
           <StoreContextProvider>
+            {/*<Cursor/>*/}
             {children}
           </StoreContextProvider>
           <Lines />

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Signup from '../Auth/Signup';
 import Signin from '../Auth/Signin';
 import StoreContextProvider, { StoreContext, useAppContext } from '@/Context/context';
+import ReCaptcha from "@/components/reCaptcha";
 // import { DropdownProps } from '../Auth/Signup';
 type StoreContextType = {
   options: { value: number; label: string }[];
@@ -23,6 +24,8 @@ const AgentRegistration = () => {
     password:"",
     confirm_password:""
   });
+  const [isVerified, setIsVerified] = useState(false);
+
 
   const {options}=useAppContext();
 
@@ -40,7 +43,11 @@ const AgentRegistration = () => {
   const changeStating=()=>{
       setData({firstName:"",lastName:"",agent_Code:"",email:"",mobile_no:"", user_name:"",password:"", confirm_password:""})
   }
-  
+
+
+  const handleDataChange = (data: boolean) => {
+    setIsVerified(data);
+  };
 
   return (
      <section className="pb-12.5 pt-32.5 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
@@ -160,6 +167,7 @@ const AgentRegistration = () => {
             className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
           />
         </div>
+        <ReCaptcha onDataChange={handleDataChange}/>
 
         <div className="flex flex-wrap gap-10 ml-0 xl:gap-15">
           <div className="mb-4 flex items-center">
@@ -176,10 +184,10 @@ const AgentRegistration = () => {
                >
                   Reset
                 </button>
-                
                 <button
                   aria-label="signup with email and password"
                   className="inline-flex items-center gap-2.5 ml-90 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                  disabled={!isVerified}
                 >
                   Register
                   <svg

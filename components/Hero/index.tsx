@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import Slider from "../Slider/slider";
+import {Navigation} from "swiper";
+import NavigationBar from "@/components/NavigationBar";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -13,10 +15,13 @@ const Hero = () => {
 
   return (
     <>
-      <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+      <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-23">
+          <NavigationBar/>
+
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
-          <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
+          <div className="flex lg:items-center lg:gap-8 xl:gap-32.5" >
             <div className=" md:w-1/2">
+
               <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 {/* 🔥 Solid - A Complete SaaS Web Template */}
               </h4>

@@ -1,3 +1,4 @@
+
 import { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
@@ -15,6 +16,7 @@ import Testimonial from "@/components/Testimonial";
 import StoreContextProvider from "@/Context/context";
 import AgentRegistration from "@/components/AgentRegistration";
 import { BrowserRouter } from "react-router-dom";
+import NavigationBar from "@/components/NavigationBar";
 
 export const metadata: Metadata = {
   title: "Heritage Healthcare TPA",
@@ -25,6 +27,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+
+        {/*<NavigationBar/>*/}
+
       <Hero />
       
       <Feature />
