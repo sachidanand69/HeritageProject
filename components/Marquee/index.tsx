@@ -7,7 +7,7 @@ export const Marquee: FC<{
     gap?: number;
     direction?: -1 | 1;
     speed?: number;
-}> = ({ children, gap = 0, direction = -1, speed = 300 }) => {
+}> = ({ children, gap = 0, direction = -1, speed = 1000 }) => {
     const time = useTime();
     const x = useTransform(
         time,
@@ -36,3 +36,4 @@ export const Marquee: FC<{
         </div>
     );
 };
+

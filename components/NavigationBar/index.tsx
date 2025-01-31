@@ -29,9 +29,9 @@ import { Marquee } from "@/components/Marquee";
 
 const NavigationBar = () => {
     return (
-        <div className="flex place-content-center">
+        <div className="flex place-content-center mt-5">
             {/* Box wrapper for the Marquee */}
-            <div className="border-4 border-gray-800 rounded-md shadow-lg overflow-hidden" style={{backgroundColor:"black",color:"white", width: "80%" }}>
+            <div className="border-1 text-white border-gray-800 rounded-md overflow-hidden bg-primary dark:bg-black dark:text-white" style={{width: "100%" }}>
                 <Marquee gap={48}>
                     <div className="flex gap-12">
                         <p className="text-2xl font-bold">Welcome to Heritage Health TPA </p>

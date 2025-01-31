@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <>
       <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-23">
-          <NavigationBar/>
+          
 
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5" >
@@ -114,6 +114,8 @@ const Hero = () => {
               </div> */}
             </div>
           </div>
+        <NavigationBar/>
+
         </div>
       </section>
     </>
