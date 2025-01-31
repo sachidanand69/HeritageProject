@@ -10,7 +10,11 @@ const StoreContextProvider=({children}:{
     children: React.ReactNode;
   })=>{
 
-       const [links, setlinks]=useState<string>("hello");
+       const [links, setlinks]=useState<string>("");
+       const [details,setDetails]=useState([{}]);
+       const [hospitalList,setHospitalList]=useState();
+       const [login,setLogin]=useState(false);
+
        const [options,setOptions]=useState<{ value: number; label: string }[]>( [{ value: 1, label: "ICICI Lamboard GIC LTD" },
         { value: 2, label: "IFFCO-TOKIO"}, 
         { value: 3, label: "Indian Bank Association [In National Insurance Company]"}, 
@@ -39,7 +43,7 @@ const StoreContextProvider=({children}:{
             { value: 12, label: "United India Insurance"}
             ])
 
-    const contextValue = {options} ;
+    const contextValue = {options,links,setlinks,details,setDetails,login,setLogin,hospitalList,setHospitalList} ;
 
     return (
         <StoreContext.Provider value={contextValue}>
@@ -53,13 +57,3 @@ export default StoreContextProvider;
 export function useAppContext(){
     return useContext(StoreContext);
 }
-
-export function useRandom() {
-    const [randomValue, setRandomValue] = useState(0);
-  
-    useEffect(()=>{
-          setRandomValue(Math.floor(Math.random()))
-        },[]) // Runs only once after the initial render
-  
-    return randomValue;
-  }

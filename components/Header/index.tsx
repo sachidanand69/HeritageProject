@@ -9,6 +9,7 @@ import { StoreContext } from "@/Context/context";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import { useAppContext} from "@/Context/context";
+import {User } from 'lucide-react';
 
 
 
@@ -21,7 +22,7 @@ const Header:React.FC = () => {
   const [selectedOption, setSelectedOption] = useState(""); // Default option
   const router=useRouter();
 
-  
+  const {login}=useAppContext();
 
 
   const options1 = [{ title: "Insured", path: "/auth/signin", submenu: { memberID: "User ID", password: "Password1", paths: "/auth/member" } },
@@ -193,7 +194,7 @@ const Header:React.FC = () => {
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0" >
             <nav className="group relative">
-              <>
+              {!login ? (<>
                 <button
                   onClick={() => setDropdownToggler(!dropdownToggler)}
                   className="flex cursor-pointer items-center justify-between gap-3 hover:text-primary"
@@ -219,7 +220,9 @@ const Header:React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </>
+              </>):(<button className="p-2 bg-gray-800 text-white rounded-full">
+          <User size={24} />
+        </button>)}
             </nav>
 
             {/* <div className="absolute z-10 mt-2 bg-white border border-gray-300 rounded-md shadow-lg w-36"> */}

@@ -21,19 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-black ${inter.className}`}>
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="light"
-        >
+        <ThemeProvider enableSystem={false} attribute="class" defaultTheme="light">
+          {/* ✅ Wrap everything inside StoreContextProvider */}
           <StoreContextProvider>
-            {children}
+            <Lines />
+            <Header /> {/* Now inside StoreContextProvider ✅ */}
+            {children}  {/* Page content */}
+            <ToasterContext />
+            <Footer />
+            <ScrollToTop />
           </StoreContextProvider>
-          <Lines />
-          <Header />
-          <ToasterContext />
-          <Footer />
-          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>
